@@ -1,0 +1,34 @@
+.about-us__title {
+  margin-bottom: 50px;
+  @include title(700, 36px, 1.67, 0.03em);
+  text-align: center;
+  color: var(--second-title-color);
+}
+  .about-us {
+    padding-bottom: 94px;
+  }
+  .about-us__list {
+    display: flex;
+  }
+  .about-us__item { 
+    &:not(:last-child) {
+      margin-right: 30px;
+   }
+  }
+  .about-us__item-wrap {
+    position: relative;
+  }
+  .about-us__item-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    @include title(700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    text-align: center;
+    width: 370px;
+    height: 70px;
+    color: #FFFFFF;
+    background-color: rgba(47, 48, 58, 0.8);
+  }

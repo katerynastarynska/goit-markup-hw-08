@@ -1,0 +1,26 @@
+@mixin logo($ff, $fw, $fs, $lh, $ls, $td) {
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $ls;
+    text-decoration: $td;
+}
+
+@mixin social-link($d, $ai, $jc, $w, $h, $br, $c, $o) {
+    display: $d;
+    align-items: $ai;
+    justify-content: $jc;
+    width: $w;
+    height: $h;
+    border-radius: $br;
+    color: $c;
+    outline: $o;
+   }
+  
+@mixin title($fw, $fs, $lh, $ls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
