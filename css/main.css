@@ -568,8 +568,12 @@ body {
   }
 }
 
-.features__item:not(:last-child) {
+.features__item {
   margin-bottom: 30px;
+}
+
+.features__item:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -585,7 +589,8 @@ body {
 @media screen and (min-width: 1200px) {
   .features__item {
     width: calc(100% / 4 - 30px);
-    margin-bottom: 0;
+    margin-left: 30px;
+    margin-bottom: 0px;
   }
 }
 
