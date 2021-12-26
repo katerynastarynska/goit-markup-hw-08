@@ -3,17 +3,24 @@
     padding-bottom: 94px;
   }
   .clients__title {
-    margin-bottom: 50px;
-    @include title(700, 36px, 1.17, 0.03em);
+    margin-bottom: 30px;
+    @include title(700, 28px, 1.17, 0.03em);
     text-align: center;
     color: var(--second-title-color);
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+      @include title(700, 36px, 1.17, 0.03em);
+    }
   }
   
   .clients-list {
     display: flex;
+    // flex-wrap: wrap;
+    flex-basis: 170px;
   }
   .clients-list__item {
-    width: 170px;
+    width: 100%;
+    // width: 170px;
     height: 92px;
     &:not(:last-child) {
       margin-right: 30px;

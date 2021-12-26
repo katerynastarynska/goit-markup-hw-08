@@ -1,7 +1,6 @@
 .our-team__title {
   margin-bottom: 30px;
   @include title(700, 28px, 1.17, 0.03em);
-
   text-align: center;
   color: var(--second-title-color);
   @media screen and (min-width: 1200px) {
