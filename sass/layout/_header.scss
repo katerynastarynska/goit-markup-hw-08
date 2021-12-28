@@ -2,9 +2,16 @@
     display: flex;
     align-items: center;
   }
+  // .header-nav {
+  //   @media screen and (max-width: 768px) {
+  //   display: none;
+  //   }
+  // }
   .header {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    // padding-top: 24px;
+    // padding-bottom: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     border-bottom: 1px solid #ECECEC;
   }
   .header-list__link {
@@ -33,8 +40,14 @@
  
   .header-logo {
     display: block;
-    margin-right: 93px;
-    @include logo(Raleway, 700, 26px, 1.19, 0.03em, none);
+    margin-right: auto;
+    width: 134px;
+    @include logo(Raleway, 700, 24px, 1.17, 0.03em, none);
+    @media screen and (min-width: 1200px) {
+      @include logo(Raleway, 700, 26px, 1.19, 0.03em, none);
+      width: 145px;
+      margin-right: 93px;
+    }
  }
  
   .header-logo__web {
@@ -44,17 +57,20 @@
     color: var(--header-main-text-color);
   }
   .header-list {
-    display: flex;
+    display: none;
     align-items: center;
-    }
+  }
   .header-list__item {
     &:not(:last-child) {
      margin-right: 50px; 
     }
   }
   .header-contacts {
-    display: flex;
+    // display: flex;
     margin-left: auto;
+    @media screen and (max-width: 768px) {
+      display: none;
+      }
   }
 
   .header-contacts__link {
@@ -81,3 +97,53 @@
     fill: currentColor;
     margin-right: 10px;
   }
+  .menu-btn {
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    margin-left: auto;
+  }
+.mob-menu {
+  position: fixed;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 5;
+  padding-top: 10px;
+  padding-bottom: 48px;
+}
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+.mob-menu-list__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.mob-menu-contacts__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.mob-social-list {
+  display: flex;
+}
+.mob-social-list__item {
+  &:not(:last-child) {
+  margin-right: 20px;
+  }
+}
+.mob-menu-list__link {
+  @include title(500, 40px, 1.17, 0.02em);
+  color: #212121;
+}
+.mob-social-list__link {
+  @include title(500, 18px, 1.22, 0.02em);
+  color: #2196F3;
+}
+

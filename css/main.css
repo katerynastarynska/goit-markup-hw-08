@@ -349,8 +349,8 @@ body {
 }
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #ECECEC;
 }
 
@@ -385,13 +385,27 @@ body {
 
 .header-logo {
   display: block;
-  margin-right: 93px;
+  margin-right: auto;
+  width: 134px;
   font-family: Raleway;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-decoration: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .header-logo {
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    width: 145px;
+    margin-right: 93px;
+  }
 }
 
 .header-logo__web {
@@ -403,7 +417,7 @@ body {
 }
 
 .header-list {
-  display: flex;
+  display: none;
   align-items: center;
 }
 
@@ -412,8 +426,13 @@ body {
 }
 
 .header-contacts {
-  display: flex;
   margin-left: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .header-contacts {
+    display: none;
+  }
 }
 
 .header-contacts__link {
@@ -438,6 +457,64 @@ body {
 .header-contacts__icon {
   fill: currentColor;
   margin-right: 10px;
+}
+
+.menu-btn {
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.mob-menu {
+  position: fixed;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 5;
+  padding-top: 10px;
+  padding-bottom: 48px;
+}
+
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.mob-menu-list__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-social-list {
+  display: flex;
+}
+
+.mob-social-list__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.mob-menu-list__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+
+.mob-social-list__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196F3;
 }
 
 .hero__title {
