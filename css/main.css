@@ -354,6 +354,20 @@ body {
   border-bottom: 1px solid #ECECEC;
 }
 
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
 .header-list__link {
   font-weight: 500;
   font-size: 14px;
@@ -421,22 +435,51 @@ body {
   align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .header-list {
+    display: flex;
+  }
+}
+
 .header-list__item:not(:last-child) {
   margin-right: 50px;
 }
 
 .header-contacts {
+  display: flex;
+  align-items: center;
   margin-left: auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .header-contacts {
     display: none;
   }
 }
 
-.header-contacts__link {
+.header-contacts-tab {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .header-contacts-tab {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .header-contacts-tab {
+    display: none;
+  }
+}
+
+.header-contacts-tab__wrap {
+  display: flex;
   align-items: center;
+  height: 14px;
+}
+
+.header-contacts__link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -450,8 +493,26 @@ body {
   color: var(--accent-color);
 }
 
+.header-contacts-tab__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--header-second-text-color);
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-contacts-tab__link:hover, .header-contacts-tab__link:focus {
+  color: var(--accent-color);
+}
+
 .header-contacts__item:not(:last-child) {
   margin-right: 30px;
+}
+
+.header-contacts-tab__item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .header-contacts__icon {
@@ -459,11 +520,28 @@ body {
   margin-right: 10px;
 }
 
+.header-contacts-phone__icon {
+  fill: currentColor;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.header-contacts-mail__icon {
+  fill: currentColor;
+  margin-right: 8px;
+}
+
 .menu-btn {
   background-color: transparent;
   border-color: transparent;
   cursor: pointer;
   margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
 }
 
 .mob-menu {
@@ -477,6 +555,13 @@ body {
   padding-bottom: 48px;
 }
 
+.mob-menu .container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .menu-close-btn {
   display: block;
   margin-left: auto;
@@ -487,6 +572,10 @@ body {
 
 .mob-menu-list__item:not(:last-child) {
   margin-bottom: 32px;
+}
+
+.mob-menu-contacts {
+  margin-bottom: 64px;
 }
 
 .mob-menu-contacts__item:not(:last-child) {
@@ -509,12 +598,37 @@ body {
   color: #212121;
 }
 
+.mob-menu-list__link:hover, .mob-menu-list__link:focus {
+  color: #2196F3;
+}
+
 .mob-social-list__link {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196F3;
+}
+
+.mob-social-list__link:hover, .mob-social-list__link:focus {
+  color: #757575;
+}
+
+.mob-menu-tel__link {
+  color: #2196F3;
+  display: block;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+}
+
+.mob-menu-mail__link {
+  color: #757575;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
 }
 
 .hero__title {
@@ -1099,18 +1213,42 @@ body {
 }
 
 .filter {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .filter {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .filter-list {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter-list {
+    margin-bottom: 50px;
+    justify-content: center;
+  }
 }
 
 .filter-list__item:not(:last-child) {
   margin-right: 8px;
+}
+
+.filter-list__item:nth-last-child(n + 3) {
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter-list__item:nth-last-child(n + 3) {
+    margin-bottom: 0;
+  }
 }
 
 .filter-examples {
@@ -1201,9 +1339,5 @@ body {
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.filter-examples-item:hover .filter-examples__description-text {
-  transform: translateY(0);
 }
 /*# sourceMappingURL=main.css.map */
