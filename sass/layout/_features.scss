@@ -1,3 +1,8 @@
+.features-container {
+  display: flex;
+  align-items: center;
+}
+
 .features__title {
   margin-bottom: 10px;
   text-align: center;
@@ -18,12 +23,15 @@
     @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -30px;
+    // margin-left: -30px;
+    justify-content: center;
+
   }
     @media screen and (min-width: 1200px) {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -30px;
+    // margin-left: -30px;
+    justify-content: center;
   }
 }
 .features__item {
@@ -33,15 +41,20 @@
   }
     @media screen and (min-width: 768px) {
       width: calc(100% / 2 - 30px);
-      margin-left: 30px;
       &:nth-last-child(-n + 2) {
       margin-bottom: 0;
+      }
+      &:nth-child(even) {
+        margin-left: 30px;
       }
     }
     @media screen and (min-width: 1200px) {
       width: calc(100% / 4 - 30px);
       margin-left: 30px;
       margin-bottom: 0px;
+      &:nth-child(1) {
+        margin-left: 0;
+      }
     }
 }
   .features {

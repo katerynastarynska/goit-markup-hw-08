@@ -20,6 +20,7 @@
   .clients-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
   .clients-list__item {
     flex-basis: calc(100% / 2 - 30px);
